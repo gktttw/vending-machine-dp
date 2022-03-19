@@ -1,0 +1,10 @@
+<h1>VendingMachine#index</h1>
+<p>Find me in app/views/vending_machine/index.html.erb</p>
+<%= form_with url: "/vending_machine/what_can_i_buy", id: "asdf", format: 'json', method: :get do |form| %>
+  <%= form.label :money_left, "Money left:" %>
+  <%= form.text_field :money_left %>
+  <%= form.label :price_tags, "price tags:" %>
+  <%= form.text_field :price_tags, value: "14, 19, 21, 24, 27, 28, 30, 33, 37, 50, 52" %>
+  <%= form.submit "what can I buy?" %>
+<% end %>
+<div id="ans"></div>
