@@ -1,0 +1,12 @@
+I"P(function() {
+  $(document).ready(function() {
+    return $("#asdf").on("ajax:success", function(e, data, status, xhr) {
+      console.log('succewss');
+      return $("#ans").append(xhr.responseText);
+    }).on("ajax:error", function(e, xhr, status, error) {
+      return $("#ans").append("<p>ERROR</p>");
+    });
+  });
+
+}).call(this);
+:ET

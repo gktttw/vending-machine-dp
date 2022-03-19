@@ -1,0 +1,14 @@
+I"~(function() {
+  $(document).ready(function() {
+    console.log('asdf');
+    return $("#asdf").on("submit", function(e, data, status, xhr) {
+      console.log('succewss');
+      return $("#ans").append(xhr.responseText);
+    }).on("ajax:error", function(e, xhr, status, error) {
+      console.log('fuck');
+      return $("#ans").append("<p>ERROR</p>");
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,13 @@
+I"/(function() {
+  $(document).ready(function() {
+    console.log('asdf');
+    return $("#asdf").on("ajax:success", function(event) {
+      console.log(event);
+      return console.log(event.detail);
+    }).on("ajax:error", function(event) {
+      return console.log('fuck');
+    });
+  });
+
+}).call(this);
+:ET

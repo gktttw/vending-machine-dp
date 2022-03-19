@@ -1,0 +1,15 @@
+I"´(function() {
+  $(document).ready(function() {
+    console.log('asdf');
+    return $("#asdf").on("ajax:success", function(event) {
+      var _data, _status, ref, xhr;
+      ref = event.detail, _data = ref[0], _status = ref[1], xhr = ref[2];
+      console.log(_data);
+      return $("#ans").append("<p>" + _data.to_json + "</p>");
+    }).on("ajax:error", function(event) {
+      return console.log('fuck');
+    });
+  });
+
+}).call(this);
+:ET

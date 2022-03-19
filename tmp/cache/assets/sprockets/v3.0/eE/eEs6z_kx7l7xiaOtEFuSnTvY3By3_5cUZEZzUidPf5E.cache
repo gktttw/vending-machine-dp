@@ -1,0 +1,11 @@
+I"1(function() {
+  $(document).ready(function() {
+    return $("#asdf").on("ajax:success", function(e, data, status, xhr) {
+      return $("#ans").append(xhr.responseText);
+    }).on("ajax:error", function(e, xhr, status, error) {
+      return $("#ans").append("<p>ERROR</p>");
+    });
+  });
+
+}).call(this);
+:ET
